@@ -49,7 +49,7 @@ Read through and follow along with the [Machine Learning review with an intro to
   
   > Since not all the data is collected from bookings or change log database tables, mistakes can happen when merging other tables with existing ones. Moreover, we don't the location of hotels and it is possible that all of them comes from a specific region and thus are not representitive. 
   
-  - If we construct a model, what type of conclusions will be able to draw from it?  [?]
+  - If we construct a model, what type of conclusions will be able to draw from it? 
   
   > We would find factors that relate to higher or lower possibility of hotel cancellation. 
   
@@ -114,7 +114,7 @@ hotels_testing <- testing(hotels_split)
 4. In this next step, we are going to do the pre-processing. Usually, I won't tell you exactly what to do here, but for your first exercise, I'll tell you the steps. 
 
 * Set up the recipe with `is_canceled` as the outcome and all other variables as predictors (HINT: `~.`).  
-* Use a `step_XXX()` function or functions (I think there are other ways to do this, but I found `step_mutate_at()` easiest) to create some indicator variables for the following variables: `children`, `babies`, and `previous_cancellations`. So, the new variable should be a 1 if the original is more than 0 and 0 otherwise. Make sure you do this in a way that accounts for values that may be larger than any we see in the dataset.  [?]
+* Use a `step_XXX()` function or functions (I think there are other ways to do this, but I found `step_mutate_at()` easiest) to create some indicator variables for the following variables: `children`, `babies`, and `previous_cancellations`. So, the new variable should be a 1 if the original is more than 0 and 0 otherwise. Make sure you do this in a way that accounts for values that may be larger than any we see in the dataset. 
 * For the `agent` and `company` variables, make new indicator variables that are 1 if they have a value of `NULL` and 0 otherwise. I also used `step_mutate_at()` for this, but there's more ways you could do it.
 * Use `fct_lump_n()` inside `step_mutate()` to lump together countries that aren't in the top 5 most occurring. 
 * If you used new names for some of the new variables you created, then remove any variables that are no longer needed. 
@@ -148,6 +148,9 @@ hotels_recipe %>%
 5. In this step we will set up a LASSO model and workflow.
 
 * In general, why would we want to use LASSO instead of regular logistic regression? (HINT: think about what happens to the coefficients).  
+
+> We will want to use that when there are a lot of factors in order to avoid overfitting.s
+
 * Define the model type, set the engine, set the `penalty` argument to `tune()` as a placeholder, and set the mode.  
 * Create a workflow with the recipe and model.  
 ```{r}
@@ -295,15 +298,25 @@ c. What happens to the true negative rate if we try to get a higher true positiv
 
 9. How might you go about questioning and evaluating the model in terms of fairness? Are there any questions you would like to ask of the people who collected the data? 
 
+> I may question the price and the locations of the hotels in order to examine the fairness of the study. As we know, many hotels are expensive and people live under poverty may be underestimated in this dataset. Since their prefenrences could be diffeent from the majority, it could change the result. 
+
 
 
 ## Bias and Fairness
 
 Read [Chapter 1: The Power Chapter](https://data-feminism.mitpress.mit.edu/pub/vi8obxh7/release/4) of Data Feminism by Catherine D'Ignazio and Lauren Klein. Write a 4-6 sentence paragraph reflecting on this chapter. As you reflect, you might consider responding to these specific questions. We will also have a discussion about these questions in class on Thursday.
 
+> In general, I was surprised by many applications of AI mentioned in the article. I felt like in many of the cases, we are just too eagerly to get ann anser from the existing data instead of thinking where the data is from and its possible implications. Overall, i think having more diverse groups and improving awareness of minority groups in data science field will help a lot: in this case, people would actually spend time thinking about the implications rather than the pure results. 
+
 * At the end of the "Matrix of Domination" section, they encourage us to "ask uncomfortable questions: who is doing the work of data science (and who is not)? Whose goals are prioritized in data science (and whose are not)? And who benefits from data science (and who is either overlooked or actively harmed)?" In general, how would you answer these questions? And why are they important?  
+
+> The answer to who is doing the work of data acience can actually show by the data. As also mentioned in the article, minority groups like Latinix, black women are scarce in this data science field. Moreover, I think the goals for people who want to use data science to facilitate equality or do good things in general should be are prioritized and those that further deepen discriminations should not. In terms of who is overlooked, the reading mentioned both dominant and monority groups are kind of being harmed. Minority groups are harmed because there is not enough representative samples while dominant groups are imparied by being overlooked the right they also have. Those questions are important to answer because through them, we can actually see what's the current problem with data science and thus should looking for ways to solve them. 
+
 * Can you think of any examples of missing datasets, like those described in the "Data Science for Whom?" section? Or was there an example there that surprised you?  
+
+> In the section where it talked about how police use a software that is trained by biased data really surprised me. If the police relies on the software, more unpriviledged people would be caught and their faces may use to furtehr train the model. In that case, a viscious cricle will be formed. 
+
 * How did the examples in the "Data Science with Whose Interests and Goals?" section make you feel? What responsibility do companies have to prevent these things from occurring? Who is to blame?
 
-> 
+> I thought the example of Target is ridiculous. I felt like the that process, they are treating potential customers, which are women in this case, as a general object other than diverse human beings. To prevent this things from happening, I feel that the not only corporations but data scientists should take more respsonsibility when analyzing the data. As mentioned in the passage, we need to think what is outside of the box. 
 
