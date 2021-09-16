@@ -318,5 +318,5 @@ Read [Chapter 1: The Power Chapter](https://data-feminism.mitpress.mit.edu/pub/v
 
 * How did the examples in the "Data Science with Whose Interests and Goals?" section make you feel? What responsibility do companies have to prevent these things from occurring? Who is to blame?
 
-> I thought the example of Target is ridiculous. I felt like the that process, they are treating potential customers, which are women in this case, as a general object other than diverse human beings. To prevent this things from happening, I feel that the not only corporations but data scientists should take more respsonsibility when analyzing the data. As mentioned in the passage, we need to think what is outside of the box. 
+> I thought the example of Target is interesting. It shows that data analysis is a double-edge sword: on one hand, people use that in business but on the other hand, with unintentions, potential consumers can be offended.To prevent this things from happening, I feel that the not only corporations but data scientists should take more respsonsibility when analyzing the data. As mentioned in the passage, we need to think what is outside of the box. 
 
