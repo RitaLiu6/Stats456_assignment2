@@ -294,11 +294,11 @@ c. What happens to the true negative rate if we try to get a higher true positiv
 
 8. Let's say that this model is going to be applied to bookings 14 days in advance of their arrival at each hotel, and someone who works for the hotel will make a phone call to the person who made the booking. During this phone call, they will try to assure that the person will be keeping their reservation or that they will be canceling in which case they can do that now and still have time to fill the room. How should the hotel go about deciding who to call? How could they measure whether it was worth the effort to do the calling? Can you think of another way they might use the model? 
 
-> I think the hotel staff should make call to those who have refundable reservation, have assigned rooms, and have canceled the booking before, asking them how certain they are about the reservations. 
+> I think the hotel staff should make call to those who have refundable reservation, have assigned rooms, and have canceled the booking before, asking them how certain they are about the reservations. If they have refundable room and assigned rooms, for example, they are less likely to cancel so it is not worthy to call that group. Given the information, the hotel may over interpret the relationship and decide to make all rooms nonrefundable or make them all assigned rooms. 
 
 9. How might you go about questioning and evaluating the model in terms of fairness? Are there any questions you would like to ask of the people who collected the data? 
 
-> I may question the price and the locations of the hotels in order to examine the fairness of the study. As we know, many hotels are expensive and people live under poverty may be underestimated in this dataset. Since their prefenrences could be diffeent from the majority, it could change the result. 
+> I may question the price and the locations of the hotels in order to examine the fairness of the study. As we know, many hotels are expensive and people live under poverty may be underestimated if the hotels in the dataset  are all fancy ones located in big cities. Since prefenrences of the poor could be diffeent from the majority, it could change the result. 
 
 
 
@@ -306,7 +306,7 @@ c. What happens to the true negative rate if we try to get a higher true positiv
 
 Read [Chapter 1: The Power Chapter](https://data-feminism.mitpress.mit.edu/pub/vi8obxh7/release/4) of Data Feminism by Catherine D'Ignazio and Lauren Klein. Write a 4-6 sentence paragraph reflecting on this chapter. As you reflect, you might consider responding to these specific questions. We will also have a discussion about these questions in class on Thursday.
 
-> In general, I was surprised by many applications of AI mentioned in the article. I felt like in many of the cases, we are just too eagerly to get ann anser from the existing data instead of thinking where the data is from and its possible implications. Overall, i think having more diverse groups and improving awareness of minority groups in data science field will help a lot: in this case, people would actually spend time thinking about the implications rather than the pure results. 
+> In general, I was surprised by many applications of AI mentioned in the article. I felt like in many of the cases, we are just too eagerly to get an anwser from the existing data instead of thinking where the data is from and its possible implications. Overall, i think having more diverse groups and improving awareness of minority groups in data science field will help a lot: in this case, people would actually spend time thinking about the implications rather than the pure results. 
 
 * At the end of the "Matrix of Domination" section, they encourage us to "ask uncomfortable questions: who is doing the work of data science (and who is not)? Whose goals are prioritized in data science (and whose are not)? And who benefits from data science (and who is either overlooked or actively harmed)?" In general, how would you answer these questions? And why are they important?  
 
