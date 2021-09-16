@@ -149,7 +149,7 @@ hotels_recipe %>%
 
 * In general, why would we want to use LASSO instead of regular logistic regression? (HINT: think about what happens to the coefficients).  
 
-> We will want to use that when there are a lot of factors in order to avoid overfitting.s
+> We will want to use that when there are a lot of factors in order to avoid overfitting.
 
 * Define the model type, set the engine, set the `penalty` argument to `tune()` as a placeholder, and set the mode.  
 * Create a workflow with the recipe and model.  
