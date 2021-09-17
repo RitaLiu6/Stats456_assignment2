@@ -32,7 +32,7 @@ When you finish the assignment, remove the `#` from the options chunk at the top
 From now on, GitHub should be part of your routine when doing assignments. I recommend making it part of your process anytime you are working in R, but I'll make you show it's part of your process for assignments.
 
 **Task**: When you are finished with the assignment, post a link below to the GitHub repo for the assignment. 
-
+https://github.com/RitaLiu6/Stats456_assignment2 
 
 ## Machine Learning review and intro to `tidymodels`
 
